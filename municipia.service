@@ -1,0 +1,14 @@
+[Unit]
+Description=Discovery Gate Service Ver. 20180403
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u app.py
+WorkingDirectory=/home/sensorid/municipia_lucca_ztl/
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
